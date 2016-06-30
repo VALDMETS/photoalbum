@@ -37,7 +37,7 @@ div {
 
 .side-albums {
   width: 24%;
-  height: 50vw;
+  height: 100vw;
   float: left; }
 
 .side-bar {
@@ -65,5 +65,10 @@ div {
   height: auto;
   margin: auto;
   opacity: 1; }
+
+.hide {
+  display: none;
+  height: 0px;
+  width: 0px; }
 
 /*# sourceMappingURL=main.css.map */
