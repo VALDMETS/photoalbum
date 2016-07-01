@@ -1,31 +1,50 @@
 body {
   background: black;
   margin: 0;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 1.5vw;
+  line-height: 3vw; }
 
 header {
   width: 100%;
   height: 100px;
   background-color: gray;
-  text-align: center; }
-  header h1 {
-    margin: 0; }
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0; }
+
+h1 {
+  margin: 0;
+  padding: 20px;
+  font-weight: 400; }
 
 img {
-  display: block;
+  display: inline-block;
   position: relative;
-  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
   height: auto;
-  overflow: hidden; }
+  width: auto;
+  max-height: 20vw;
+  overflow: hidden;
+  border-bottom: 1px solid white; }
 
 a {
-  margin: 6%; }
+  margin: 6%;
+  color: white;
+  text-decoration: none; }
 
 div {
   margin: 2%; }
 
 h2 {
-  color: white; }
+  color: white;
+  font-weight: 400;
+  font-size: 4vw; }
 
 footer {
   display: block;
@@ -48,7 +67,8 @@ footer {
   position: relative;
   height: 25vw;
   width: 20%;
-  background-color: purple; }
+  border: 1px solid white;
+  overflow: hidden; }
 
 .side-albums {
   width: 24%;
@@ -58,7 +78,8 @@ footer {
 
 .side-bar {
   width: 80%;
-  height: 6vw; }
+  height: 6vw;
+  line-height: 2vw; }
 
 .photo-list {
   width: 100%; }
@@ -76,14 +97,29 @@ footer {
 
 .photo-list .highlight {
   display: block;
-  max-width: 600px;
-  height: auto;
-  margin: 0 auto;
-  z-index: 3; }
+  max-width: 800px;
+  width: 100%;
+  max-height: none;
+  margin: 60px auto;
+  z-index: 3;
+  border: none;
+  left: 0;
+  transform: none; }
+
+.hightlight::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  position: absolute; }
 
 .hide {
   height: 0px;
   width: 100%;
-  margin: 0; }
+  margin: 0;
+  border: none;
+  overflow: visible;
+  font-size: 0px;
+  color: transparent; }
 
 /*# sourceMappingURL=main.css.map */
