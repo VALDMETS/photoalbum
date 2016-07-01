@@ -2,7 +2,8 @@ var $albumBox = $('.album-list');
 var $photoBox = $('.photo-list');
 var returnPageOk = 0;
 
-window.location.hash = 'default';
+// window.location.hash = 'default';
+// window.location.hash = currentHash;
 
 albumList.forEach(function(album, i) {
     var totalInsert = '<a class="album-button" href="#' + album.albumName+ '"><img src="' + album.photos[0].source + '">' + album.albumName + '</a>';
@@ -14,6 +15,7 @@ $(document).ready(function() {
 
         $('header').addClass('hide');
         var albumID = location.hash.slice(1);
+        var currentHash = location.hash.slice(1);
         var picsToShow = albumList.filter(function(album, i) {
             return albumList[i].albumName === albumID;
         });
