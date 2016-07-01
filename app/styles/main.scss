@@ -3,22 +3,26 @@
 body {
   background: $background;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   text-align: center;
   color: $white;
   font-size: 1.5vw;
   line-height: 3vw;
+  text-shadow: -1px -1px 1px $dark;
 }
 
 header {
   width: 100%;
   height: 100px;
-  background-color: gray;
+  background-color: $dark;
   text-align: center;
   line-height: 40px;
   font-size: 30px;
   font-weight: 500;
+  color: $white;
+  text-shadow: -2px -2px $background;
   margin: 0;
+  border-bottom: 1px solid $white;
 }
 h1 {
   margin: 0;
@@ -26,7 +30,7 @@ h1 {
   font-weight: 400;
 }
 img {
-  display: inline-block;
+  // display: inline-block;
   position: relative;
   left: 50%;
   transform: translate(-50%,0);
@@ -34,7 +38,8 @@ img {
   width: auto;
   max-height: 20vw;
   overflow: hidden;
-  border-bottom: 1px solid $white;
+  filter: brightness(50%);
+  // border-bottom: 1px solid $white;
 
 }
 a {
@@ -50,16 +55,16 @@ h2 {
   font-weight: 400;
   font-size: 4vw;
 }
-footer {
-  display: block;
-  position: fixed;
-  bottom: 0px;
-  background-color: black;
-  opacity: .7;
-  height: 30px;
-  width: 100%;
-  z-index: 4;
-}
+// footer {
+//   display: block;
+//   position: fixed;
+//   bottom: 0px;
+//   background-color: black;
+//   opacity: .7;
+//   height: 30px;
+//   width: 100%;
+//   z-index: 4;
+// }
 .album-list {
   // margin: 1%;
   width: 100%;
@@ -72,23 +77,27 @@ footer {
   position: relative;
   height: 25vw;
   width: 20%;
-  border: 1px solid $white;
-  // background-color: purple;
+  // border: 1px solid $white;
   overflow: hidden;
-  // text-align: center;
+
+  background-color: $dark;
+  box-shadow: -2px -2px 2px $dark;
+  transition: (color .5s);
 
 }
 .side-albums {
   width: 24%;
   height: 70vw;
   float:left;
-  margin-right: 2.3%;
+  margin-left: 1%;
+  margin-right: -2%;
 }
 
 .side-bar {
   width: 80%;
   height: 6vw;
   line-height: 2vw;
+  background: linear-gradient(to top, $dark, $background);
 }
 .photo-list {
   width: 100%;
@@ -98,7 +107,7 @@ footer {
   position: absolute;
   width: 100%;
   height: 100vw;
-  background-color: black;
+  background-color: $background;
   top:0;
   left:0;
   margin:0;
@@ -116,15 +125,6 @@ footer {
   left: 0;
   transform: none;
 }
-.hightlight::before {
-  content: '';
-  width: 40px;
-  height: 40px;
-  background-color: red;
-  position: absolute;
-
-}
-
 .hide {
   height: 0px;
   width: 100%;
@@ -133,4 +133,18 @@ footer {
   overflow: visible;
   font-size: 0px;
   color: transparent;
+}
+.album-button:hover {
+  transition: (box-shadow 3s);
+  box-shadow: -8px -4px 6px $darkest;
+  cursor: pointer;
+  color: $lighten;
+}
+h2:hover {
+  cursor: pointer;
+  transition: (color .3s);
+  color: $lighten;
+}
+.side-bar:active {
+  background: linear-gradient(to top, $darkest, $background);
 }
