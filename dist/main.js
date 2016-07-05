@@ -14,10 +14,9 @@ $(document).ready(function() {
     window.addEventListener('hashchange', function() {
 
         $('header').addClass('hide');
-        var albumID = location.hash.slice(1);
         var currentHash = location.hash.slice(1);
         var picsToShow = albumList.filter(function(album, i) {
-            return albumList[i].albumName === albumID;
+            return albumList[i].albumName === currentHash;
         });
         console.log(picsToShow);
         picsToShow = picsToShow[0];
